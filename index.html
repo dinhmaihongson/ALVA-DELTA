@@ -4,253 +4,702 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ALVA DELTA CO., LTD | Global Export Solutions</title>
+    
+    <!-- SEO & Open Graph Tags -->
+    <meta name="description" content="ALVA DELTA CO., LTD is a premier Vietnam exporter of high-quality Coconut Shell Charcoal Briquettes (Shisha/BBQ), Quartz Stones, and premium agricultural products.">
+    <meta property="og:title" content="ALVA DELTA CO., LTD | Global Export Solutions">
+    <meta property="og:description" content="Trusted B2B partner from Vietnam supplying Charcoal, Minerals, and Premium Agricultural products globally.">
+    <meta property="og:image" content="images/Avatar.png">
+    
+    <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <style>
-        /* CSS Phong cách hiện đại tối giản theo mẫu Pooja Exports */
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
-        html { scroll-behavior: smooth; }
-        body { color: #333; background-color: #f9f9f9; line-height: 1.6; }
+        /* CSS Reset & Variables */
+        :root {
+            --primary-color: #0e1c36;
+            --secondary-color: #2a9d8f;
+            --accent-color: #e76f51;
+            --text-color: #333;
+            --light-bg: #f8f9fa;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        /* Header & Navigation */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+
+        .logo img {
+            height: 50px;
+            display: block;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 25px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: var(--primary-color);
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: var(--secondary-color);
+        }
+
+        /* Hero Picture Section */
+        .hero {
+            position: relative;
+            height: 75vh; /* Giảm nhẹ chiều cao xuống so với video để vừa vặn khung hình ảnh */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            text-align: center;
+            overflow: hidden;
+            margin-top: 70px;
+            /* Sử dụng ảnh hero photo.jpg bạn vừa tải lên làm hình nền */
+            background: url('images/hero photo.jpg') center center / cover no-repeat;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(rgba(14, 28, 54, 0.65), rgba(14, 28, 54, 0.65));
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 900px;
+            padding: 0 20px;
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+        }
+
+        .hero-content p {
+            font-size: 1.3rem;
+            margin-bottom: 30px;
+            opacity: 0.95;
+            text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: var(--secondary-color);
+            color: var(--white);
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s, transform 0.2s;
+            margin: 5px;
+        }
+
+        .btn:hover {
+            background-color: #21867a;
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid var(--white);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--white);
+            color: var(--primary-color);
+        }
+
+        /* Sections General */
+        section {
+            padding: 80px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.2rem;
+            color: var(--primary-color);
+            margin-bottom: 50px;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background-color: var(--secondary-color);
+            margin: 10px auto 0;
+        }
+
+        /* About Us Section with Director */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .director-card {
+            background: var(--light-bg);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        .director-card img {
+            width: 100%;
+            max-width: 220px;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-bottom: 15px;
+            border: 5px solid var(--white);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .director-card h3 {
+            color: var(--primary-color);
+            font-size: 1.25rem;
+        }
+
+        .director-card p {
+            color: var(--secondary-color);
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .about-text h2 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+
+        .about-text p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        /* Why Choose Us Section */
+        .bg-light-section {
+            background-color: var(--light-bg);
+            max-width: 100%;
+        }
         
-        /* Navigation */
-        header { position: fixed; top: 0; left: 0; width: 100%; display: flex; justify-content: space-between; align-items: center; padding: 20px 8%; z-index: 1000; transition: 0.5s; background: rgba(14, 28, 54, 0.95); }
-        .logo { color: #fff; font-size: 24px; font-weight: 700; text-decoration: none; display: flex; align-items: center; gap: 10px; }
-        .logo span { color: #00a8cc; }
-        nav ul { display: flex; list-style: none; gap: 30px; }
-        nav ul li a { color: #fff; text-decoration: none; font-weight: 500; transition: 0.3s; }
-        nav ul li a:hover { color: #00a8cc; }
+        .bg-light-section .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 80px 20px;
+        }
 
-        /* Hero Section */
-        .hero { height: 100vh; background: linear-gradient(rgba(14, 28, 54, 0.7), rgba(14, 28, 54, 0.7)), url('https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; color: #fff; padding: 0 20px; }
-        .hero h1 { font-size: 3.5rem; margin-bottom: 20px; font-weight: 700; letter-spacing: 1px; }
-        .hero p { font-size: 1.2rem; max-width: 800px; margin-bottom: 30px; color: #ddd; }
-        .btn { display: inline-block; padding: 12px 30px; background: #00a8cc; color: #fff; text-decoration: none; border-radius: 5px; font-weight: 600; transition: 0.3s; }
-        .btn:hover { background: #007cc7; transform: translateY(-2px); }
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
 
-        /* Sections Chung */
-        section { padding: 80px 8%; }
-        .section-title { text-align: center; font-size: 2.5rem; color: #0e1c36; margin-bottom: 50px; position: relative; }
-        .section-title::after { content: ''; display: block; width: 60px; height: 3px; background: #00a8cc; margin: 15px auto 0; }
+        .feature-box {
+            background: var(--white);
+            padding: 30px 20px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+            transition: transform 0.3s;
+        }
 
-        /* About Section */
-        .about-container { display: flex; align-items: center; gap: 50px; }
-        .about-text { flex: 1; }
-        .about-text p { margin-bottom: 20px; color: #555; font-size: 1.1rem; }
-        .about-img { flex: 1; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
-        .about-img img { width: 100%; display: block; }
+        .feature-box:hover {
+            transform: translateY(-5px);
+        }
 
-        /* Product Grid Section */
-        .product-subtitle { font-size: 1.8rem; color: #0e1c36; margin: 40px 0 20px; border-left: 5px solid #00a8cc; padding-left: 15px; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
-        .card { background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05); transition: 0.3s; }
-        .card:hover { transform: translateY(-5px); box-shadow: 0 8px 25px rgba(0,0,0,0.1); }
-        .card-img { height: 220px; overflow: hidden; }
-        .card-img img { width: 100%; height: 100%; object-fit: cover; transition: 0.5s; }
-        .card:hover .card-img img { transform: scale(1.1); }
-        .card-content { padding: 25px; }
-        .card-content h3 { font-size: 1.4rem; color: #0e1c36; margin-bottom: 15px; }
-        .card-content p { color: #666; font-size: 0.95rem; margin-bottom: 15px; }
-        .specs { font-size: 0.85rem; background: #f4f7f6; padding: 10px; border-radius: 5px; color: #444; }
+        .feature-box i {
+            font-size: 2.5rem;
+            color: var(--secondary-color);
+            margin-bottom: 15px;
+        }
 
-        /* Contact Section */
-        .contact-container { display: flex; gap: 50px; }
-        .contact-info { flex: 1; background: #0e1c36; color: #fff; padding: 40px; border-radius: 8px; }
-        .contact-info h2 { margin-bottom: 30px; font-size: 1.8rem; }
-        .info-item { display: flex; align-items: center; gap: 20px; margin-bottom: 25px; }
-        .info-item i { font-size: 1.5rem; color: #00a8cc; width: 30px; text-align: center; }
-        .info-item p { font-size: 1rem; color: #ccc; }
-        .info-item strong { color: #fff; display: block; }
-        .contact-form { flex: 1.5; background: #fff; padding: 40px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
-        .form-group { margin-bottom: 20px; }
-        .form-group label { display: block; margin-bottom: 8px; font-weight: 600; color: #333; }
-        .form-group input, .form-group textarea { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 5px; outline: none; transition: 0.3s; }
-        .form-group input:focus, .form-group textarea:focus { border-color: #00a8cc; }
-        .form-btn { width: 100%; padding: 14px; background: #0e1c36; color: #fff; border: none; border-radius: 5px; font-weight: 600; cursor: pointer; transition: 0.3s; }
-        .form-btn:hover { background: #00a8cc; }
+        .feature-box h3 {
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
 
-        /* WhatsApp Floating Button */
-        .whatsapp-float { position: fixed; bottom: 40px; right: 40px; background-color: #25d366; color: #fff; border-radius: 50px; text-align: center; font-size: 30px; box-shadow: 2px 2px 10px rgba(0,0,0,0.2); z-index: 100; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; text-decoration: none; transition: 0.3s; }
-        .whatsapp-float:hover { transform: scale(1.1); background-color: #128c7e; }
+        /* Products Section */
+        .product-card {
+            background: var(--white);
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            padding: 30px;
+            margin-bottom: 50px;
+        }
+
+        .product-header-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 30px;
+            margin-bottom: 25px;
+        }
+
+        .product-info h3 {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+
+        .product-meta {
+            margin-top: 15px;
+            background: var(--light-bg);
+            padding: 15px;
+            border-radius: 5px;
+        }
+
+        .product-meta p {
+            margin-bottom: 5px;
+            font-size: 0.95rem;
+        }
+
+        /* Product Gallery Layout */
+        .product-gallery {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .gallery-item {
+            position: relative;
+            border-radius: 6px;
+            overflow: hidden;
+            height: 160px;
+            background: #ddd;
+            border: 1px solid #eee;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .gallery-label {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(14, 28, 54, 0.8);
+            color: var(--white);
+            font-size: 0.8rem;
+            text-align: center;
+            padding: 4px 2px;
+        }
+
+        /* Technical Specifications Table */
+        .specs-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        .specs-table th, .specs-table td {
+            border: 1px solid #e0e0e0;
+            padding: 10px 15px;
+            text-align: left;
+        }
+
+        .specs-table th {
+            background-color: var(--primary-color);
+            color: var(--white);
+        }
+
+        .specs-table tr:nth-child(even) {
+            background-color: var(--light-bg);
+        }
+
+        /* Contact & Forms */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+
+        .contact-info-box p {
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+
+        .contact-info-box i {
+            color: var(--secondary-color);
+            margin-right: 10px;
+            width: 25px;
+        }
+
+        .inquiry-form {
+            background: var(--light-bg);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+
+        .form-group textarea {
+            height: 120px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 12px;
+            background: var(--primary-color);
+            color: var(--white);
+            border: none;
+            border-radius: 4px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .submit-btn:hover {
+            background: var(--secondary-color);
+        }
+
+        /* Global WhatsApp Sticky Button */
+        .whatsapp-sticky {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #25D366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+            z-index: 999;
+            transition: transform 0.3s;
+        }
+
+        .whatsapp-sticky:hover {
+            transform: scale(1.1);
+            color: white;
+        }
 
         /* Footer */
-        footer { background: #091222; color: #888; text-align: center; padding: 30px 0; font-size: 0.9rem; border-top: 1px solid #152542; }
+        footer {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 40px 20px;
+            text-align: center;
+        }
 
-        /* Responsive di động */
+        footer img {
+            height: 60px;
+            margin-bottom: 15px;
+        }
+
+        /* Responsive Breakpoints */
         @media (max-width: 968px) {
-            header { padding: 20px 5%; }
-            .about-container, .contact-container { flex-direction: column; }
-            .hero h1 { font-size: 2.5rem; }
-            section { padding: 60px 5%; }
+            .about-grid, .product-header-grid, .contact-grid {
+                grid-template-columns: 1fr;
+            }
+            .product-gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .hero-content h1 {
+                font-size: 2.2rem;
+            }
+            .nav-container {
+                flex-direction: column;
+                gap: 10px;
+            }
+            nav ul li {
+                margin: 0 10px;
+            }
         }
     </style>
 </head>
 <body>
 
+    <!-- Header / Navigation -->
     <header>
-        <a href="#" class="logo">ALVA <span>delta</span></a>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#products">Products</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+        <div class="nav-container">
+            <a href="#home" class="logo">
+                <img src="images/Avatar.png" alt="ALVA DELTA Logo">
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
+    <!-- Hero Section (Picture Background) -->
     <section id="home" class="hero">
-        <h1>Delivering Premium Quality Beyond Borders</h1>
-        <p>At Alva Delta, we specialize in sourcing and supplying high-grade minerals and premium agricultural products tailored to meet international standard requirements with reliability and global reach.</p>
-        <a href="#contact" class="btn">Inquire Now <i class="fas fa-arrow-right"></i></a>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Delivering Premium Quality Beyond Borders</h1>
+            <p>Trusted Global Export Partner from Vietnam for Minerals, Charcoal, and Premium Agricultural Products</p>
+            <a href="#contact" class="btn">Inquire Now</a>
+        </div>
     </section>
 
+    <!-- About Company Section -->
     <section id="about">
-        <h2 class="section-title">About Our Company</h2>
-        <div class="about-container">
+        <div class="section-title">About Our Company</div>
+        <div class="about-grid">
+            <div class="director-card">
+                <img src="images/Code_Generated_Image.png" alt="Ms. Ngo Thi Thao (Merry)">
+                <h3>Ms. Ngo Thi Thao (Merry)</h3>
+                <p>Managing Director</p>
+            </div>
             <div class="about-text">
+                <h2>ALVA DELTA COMPANY LIMITED</h2>
                 <p>Headquartered in Bac Ninh, Vietnam, <strong>ALVA DELTA COMPANY LIMITED</strong> is a prestigious international trading and export enterprise. We take pride in bridging rich local resources with global industries.</p>
                 <p>We specialize leadingly in High-Quality Minerals alongside a selective portfolio of Premium Vietnamese Agricultural Products. Driven by global standards, strict quality control, and optimized logistics, we guarantee a sustainable, high-capacity supply chain for all international partners.</p>
-                <p>Under the professional management of our Director, Ms. Ngo Thi Thao (Merry), we aim to establish long-term, trust-based business relationships worldwide by delivering uncompromising quality and timely execution.</p>
-            </div>
-            <div class="about-img">
-                <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800&q=80" alt="Alva Delta Export Logistics">
+                <p>Under professional management, we aim to establish long-term, trust-based business relationships worldwide by delivering uncompromising quality and timely execution.</p>
             </div>
         </div>
     </section>
 
-    <section id="products" style="background: #f0f4f8;">
-        <h2 class="section-title">Our Products Portfolio</h2>
-        
-        <div class="product-subtitle"><i class="fas fa-gem"></i> High-Quality Minerals</div>
-        <div class="grid">
-            <div class="card">
-                <div class="card-img">
-                    <img src="https://images.unsplash.com/photo-1599740831464-5cfa1a636739?auto=format&fit=crop&w=500&q=80" alt="Quartz Stones">
+    <!-- Why Choose Us Section -->
+    <div class="bg-light-section">
+        <div class="container">
+            <div class="section-title">Why Choose ALVA DELTA</div>
+            <div class="features-grid">
+                <div class="feature-box">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    <h3>Quality Assurance</h3>
+                    <p>All products undergo strict laboratory analysis, providing full COA & SGS reports before shipment.</p>
                 </div>
-                <div class="card-content">
-                    <h3>Quartz Stones</h3>
-                    <p>Premium-grade natural quartz stones with high purity and excellent durability, widely used for engineered stone manufacturing, industrial ceramics, and construction.</p>
-                    <div class="specs">
-                        <strong>Loading Port:</strong> Hai Phong Port, Vietnam<br>
-                        <strong>Supply Ability:</strong> High Capacity / Month<br>
-                        <strong>Incoterms:</strong> FOB, CIF, CFR
-                    </div>
+                <div class="feature-box">
+                    <i class="fa-solid fa-cubes"></i>
+                    <h3>OEM & Private Label</h3>
+                    <p>Flexible custom packaging tailored exactly to your brand requirements and market preferences.</p>
+                </div>
+                <div class="feature-box">
+                    <i class="fa-solid fa-ship"></i>
+                    <h3>Global Logistics</h3>
+                    <p>Strong ties with major shipping lines ensures competitive freight rates and timely global shipping execution.</p>
                 </div>
             </div>
-            <div class="card">
-                <div class="card-img">
-                    <img src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=500&q=80" alt="Coal / Charcoal">
-                </div>
-                <div class="card-content">
-                    <h3>Industrial Coal & Charcoal</h3>
-                    <p>High calorific value industrial coal and eco-friendly charcoal processed to international standards. Features long-lasting burning performance and low ash content.</p>
-                    <div class="specs">
-                        <strong>Loading Port:</strong> Hai Phong Port, Vietnam<br>
-                        <strong>Application:</strong> Metallurgy, Energy, BBQ<br>
-                        <strong>Packaging:</strong> PP Bags or Jumbo Bags
+        </div>
+    </div>
+
+    <!-- Products Portfolio Section -->
+    <section id="products">
+        <div class="section-title">Our Products Portfolio</div>
+
+        <!-- PRODUCT 1: THAN SHISHA (SẢN PHẨM CHỦ LỰC) -->
+        <div class="product-card">
+            <div class="product-header-grid">
+                <div class="product-info">
+                    <h3><i class="fa-solid fa-fire" style="color: var(--accent-color);"></i> Premium Coconut Shell Charcoal Briquettes</h3>
+                    <p>Specially manufactured for high-end Shisha/Hookah and premium BBQ heating application. Made from 100% natural sustainable eco-friendly premium coconut shells from Vietnam. Features extreme long-lasting burning duration, zero smoke, zero odor, and incredibly low ash content.</p>
+                    
+                    <div class="product-meta">
+                        <p><strong><i class="fa-solid fa-anchor"></i> Loading Port:</strong> Cat Lai Port / Hai Phong Port, Vietnam</p>
+                        <p><strong><i class="fa-solid fa-box-open"></i> Packaging:</strong> 1kg Box, 10kg Master Carton with Inner Plastic Bag (Custom OEM Available)</p>
+                        <p><strong><i class="fa-solid fa-shapes"></i> Shapes:</strong> Cube (25x25x25mm, 26x26x26mm) / Hexagonal</p>
                     </div>
+                </div>
+                
+                <div>
+                    <h4>Technical Specifications (Lab Tested)</h4>
+                    <table class="specs-table">
+                        <tr><td><strong>Fixed Carbon</strong></td><td>80% - 85% Min</td></tr>
+                        <tr><td><strong>Ash Content</strong></td><td>2.5% - 3% Max</td></tr>
+                        <tr><td><strong>Moisture</strong></td><td>5% - 6% Max</td></tr>
+                        <tr><td><strong>Volatile Matter</strong></td><td>12% - 15% Max</td></tr>
+                        <tr><td><strong>Burning Time</strong></td><td>2.5 - 3 Hours</td></tr>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Bố cục Thư viện ảnh sản phẩm thực tế kết hợp COA/Test mẫu -->
+            <h4>Product Gallery & Quality Certificates</h4>
+            <div class="product-gallery">
+                <div class="gallery-item">
+                    <img src="images/thanshisha1.jpg" alt="Charcoal Briquette Showcase">
+                    <div class="gallery-label">Product Showcase</div>
+                </div>
+                <div class="gallery-item">
+                    <!-- Ảnh than thứ 2 (Nếu bạn tải thêm ảnh thì đổi tên tại đây, hiện tại tạm lặp lại ảnh 1 hoặc để trống) -->
+                    <img src="images/thanshisha1.jpg" alt="Charcoal Mass Production">
+                    <div class="gallery-label">Mass Production</div>
+                </div>
+                <div class="gallery-item">
+                    <!-- Khu vực để bạn tải ảnh chứng nhận phân tích COA lên sau này -->
+                    <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=500&q=80" alt="Charcoal COA Report">
+                    <div class="gallery-label">COA Certificate</div>
+                </div>
+                <div class="gallery-item">
+                    <!-- Khu vực để bạn tải ảnh kết quả kiểm nghiệm mẫu SGS/Lab lên sau này -->
+                    <img src="https://images.unsplash.com/photo-1532187863486-abf9d39d6618?auto=format&fit=crop&w=500&q=80" alt="Charcoal Lab Test Result">
+                    <div class="gallery-label">Lab Test Results</div>
                 </div>
             </div>
         </div>
 
-        <div class="product-subtitle"><i class="fas fa-leaf"></i> Premium Agricultural Products</div>
-        <div class="grid">
-            <div class="card">
-                <div class="card-img">
-                    <img src="https://images.unsplash.com/photo-1600189020840-e9918c25269d?auto=format&fit=crop&w=500&q=80" alt="Dried Fruits">
-                </div>
-                <div class="card-content">
-                    <h3>Premium Dried Fruits</h3>
-                    <p>100% natural and hygienically processed Vietnamese dried fruits. Retains intense natural flavor, nutrients, and vitamins without artificial preservatives.</p>
-                    <div class="specs">
-                        <strong>Types:</strong> Mango, Jackfruit, Banana, etc.<br>
-                        <strong>Certification:</strong> ISO, HACCP Clean Standards<br>
-                        <strong>Packaging:</strong> OEM Retail Bags / Bulk Carton
+        <!-- PRODUCT 2: QUARTZ STONES -->
+        <div class="product-card">
+            <div class="product-header-grid">
+                <div class="product-info">
+                    <h3><i class="fa-solid fa-gem" style="color: #4a90e2;"></i> High-Purity Quartz Stones</h3>
+                    <p>Premium-grade natural quartz stones with exceptionally high silicon dioxide (SiO2) purity and excellent durability, widely used for engineered stone manufacturing, industrial ceramics, metallurgy, and high-end construction materials.</p>
+                    <div class="product-meta">
+                        <p><strong><i class="fa-solid fa-anchor"></i> Loading Port:</strong> Hai Phong Port, Vietnam</p>
+                        <p><strong><i class="fa-solid fa-box-open"></i> Supply Ability:</strong> High Capacity / Monthly Container Contracts</p>
+                        <p><strong><i class="fa-solid fa-handshake"></i> Incoterms:</strong> FOB, CIF, CFR</p>
                     </div>
                 </div>
-            </div>
-            <div class="card">
-                <div class="card-img">
-                    <img src="https://images.unsplash.com/photo-1560806887-1e4cd0b6cbd6?auto=format&fit=crop&w=500&q=80" alt="Coconuts">
-                </div>
-                <div class="card-content">
-                    <h3>Fresh & Processed Coconuts</h3>
-                    <p>High-quality sweet coconuts sourced directly from organic orchards in Vietnam. Available in fresh green young coconuts or mature diamonds for export.</p>
-                    <div class="specs">
-                        <strong>Origin:</strong> Ben Tre, Vietnam<br>
-                        <strong>Size:</strong> 800g - 1200g+ per piece<br>
-                        <strong>Storage:</strong> Reef Container (2-4°C)
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-img">
-                    <img src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?auto=format&fit=crop&w=500&q=80" alt="Coffee Beans">
-                </div>
-                <div class="card-content">
-                    <h3>Vietnamese Coffee Beans</h3>
-                    <p>Premium Robusta and Arabica coffee beans harvested at peak ripeness. Carefully sun-dried and sorted to deliver robust aroma and global exceptional taste.</p>
-                    <div class="specs">
-                        <strong>Grade:</strong> Screen 16 / Screen 18 Clean<br>
-                        <strong>Moisture:</strong> Max 12.5%<br>
-                        <strong>Packaging:</strong> 60kg Jute Bags
-                    </div>
+                <div>
+                    <table class="specs-table" style="margin-top: 35px;">
+                        <tr><td><strong>SiO2 Purity</strong></td><td>99.0% Min</td></tr>
+                        <tr><td><strong>Fe2O3</strong></td><td>0.01% Max</td></tr>
+                        <tr><td><strong>Size Availability</strong></td><td>Custom Crushed / Lump sizes available</td></tr>
+                    </table>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="contact">
-        <h2 class="section-title">Get In Touch</h2>
-        <div class="contact-container">
-            <div class="contact-info">
+    <!-- Contact Section -->
+    <section id="contact" style="background-color: var(--white);">
+        <div class="section-title">Get In Touch</div>
+        <div class="contact-grid">
+            <div class="contact-info-box">
                 <h2>Contact Information</h2>
-                <div class="info-item">
-                    <i class="fas fa-building"></i>
-                    <p><strong>Company Name:</strong>ALVA DELTA COMPANY LIMITED</p>
-                </div>
-                <div class="info-item">
-                    <i class="fas fa-user-tie"></i>
-                    <p><strong>Director:</strong>Ms. Ngo Thi Thao (Merry)</p>
-                </div>
-                <div class="info-item">
-                    <i class="fas fa-phone-alt"></i>
-                    <p><strong>Mobile / WhatsApp:</strong>(+84) 877580504</p>
-                </div>
-                <div class="info-item">
-                    <i class="fas fa-envelope"></i>
-                    <p><strong>Official Email:</strong>Alva.Delta8499@gmail.com</p>
-                </div>
-                <div class="info-item">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <p><strong>Head Office:</strong>CL3.1 Him Lam Green Park, Vo Cuong, Bac Ninh, Viet Nam</p>
+                <p style="margin-top: 20px; color: #666;">Reach out directly to our global commercial operations desk for dynamic quotations, sample test requests, or plant inspection schedules.</p>
+                
+                <div style="margin-top: 30px;">
+                    <p><i class="fa-solid fa-building"></i> <strong>Company Name:</strong> ALVA DELTA COMPANY LIMITED</p>
+                    <p><i class="fa-solid fa-user-tie"></i> <strong>Director:</strong> Ms. Ngo Thi Thao (Merry)</p>
+                    <p><i class="fa-solid fa-phone"></i> <strong>Mobile / WhatsApp:</strong> (+84) 877580504</p>
+                    <p><i class="fa-solid fa-envelope"></i> <strong>Official Email:</strong> Alva.Delta8499@gmail.com</p>
+                    <p><i class="fa-solid fa-location-dot"></i> <strong>Head Office:</strong> CL3.1 Him Lam Green Park, Vo Cuong, Bac Ninh, Viet Nam</p>
                 </div>
             </div>
 
-            <form class="contact-form" action="https://formspree.io/f/xoqggrbe" method="POST">
-                <div class="form-group">
-                    <label>Your Name / Company Name</label>
-                    <input type="text" name="name" required placeholder="Enter your name or company">
-                </div>
-                <div class="form-group">
-                    <label>Your Business Email</label>
-                    <input type="email" name="_replyto" required placeholder="Enter your email address">
-                </div>
-                <div class="form-group">
-                    <label>Inquiry Message (Products, Quantity, Incoterms...)</label>
-                    <textarea name="message" rows="5" required placeholder="Describe your export requirements in detail..."></textarea>
-                </div>
-                <input type="hidden" name="_to" value="Alva.Delta8499@gmail.com">
-                <button type="submit" class="form-btn">Submit Inquiry Message</button>
-            </form>
+            <!-- Formspree Liên hệ chống Bot Spam -->
+            <div class="inquiry-form">
+                <h3>Submit Inquiry Message</h3>
+                <form action="https://formspree.io/f/xoqggrbe" method="POST">
+                    <input type="text" name="_gotcha" style="display:none">
+                    
+                    <div class="form-group">
+                        <label for="name">Your Name / Company Name</label>
+                        <input type="text" id="name" name="name" required placeholder="John Doe / Global Trading Ltd">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Business Email Address</label>
+                        <input type="email" id="email" name="email" required placeholder="name@company.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="product">Target Product Inquiry</label>
+                        <select id="product" name="product">
+                            <option value="Charcoal">Premium Coconut Shell Charcoal Briquettes</option>
+                            <option value="Quartz">High-Purity Quartz Stones</option>
+                            <option value="Others">Other Trade Requirements</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Detailed Message Specifications</label>
+                        <textarea id="message" name="message" required placeholder="Please outline specifications needed, estimated quantity, destination port, and incoterm terms..."></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Inquiry</button>
+                </form>
+            </div>
         </div>
     </section>
 
-    <a href="https://wa.me/84877580504" class="whatsapp-float" target="_blank">
-        <i class="fab fa-whatsapp"></i>
+    <!-- Global Floating WhatsApp Button -->
+    <a href="https://wa.me/84877580504" class="whatsapp-sticky" target="_blank">
+        <i class="fa-brands fa-whatsapp"></i>
     </a>
 
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2026 ALVA DELTA COMPANY LIMITED. All Rights Reserved. | Delivering Premium Export Solutions.</p>
+        <img src="images/Avatar.png" alt="ALVA DELTA Logo White">
+        <p>&copy; 2026 ALVA DELTA COMPANY LIMITED. All Rights Reserved.</p>
+        <p style="font-size: 0.8rem; opacity: 0.6; margin-top: 5px;">Delivering Premium Export Solutions Globally</p>
     </footer>
 
 </body>
