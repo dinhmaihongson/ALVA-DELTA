@@ -1,0 +1,296 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Premium Coconut Shell Charcoal Briquettes",
+      "icon": "fa-fire",
+      "iconColor": "#e76f51",
+      "category": "Fuel & Energy",
+      "shortDescription": "High-quality charcoal for Shisha/Hookah and BBQ applications",
+      "fullDescription": "Specially manufactured for high-end Shisha/Hookah and premium BBQ heating application. Made from 100% natural sustainable eco-friendly premium coconut shells from Vietnam. This product is carefully selected and processed to ensure consistent quality and optimal burning performance.",
+      "features": [
+        "100% natural coconut shell",
+        "Eco-friendly and sustainable",
+        "Consistent cube shapes",
+        "Long burning time",
+        "Minimal ash production",
+        "Perfect for commercial use"
+      ],
+      "specifications": [
+        {
+          "label": "Fixed Carbon",
+          "value": "80% - 85% Min"
+        },
+        {
+          "label": "Ash Content",
+          "value": "2.5% - 3% Max"
+        },
+        {
+          "label": "Moisture",
+          "value": "5% - 6% Max"
+        },
+        {
+          "label": "Volatile Matter",
+          "value": "12% - 15% Max"
+        },
+        {
+          "label": "Burning Time",
+          "value": "2.5 - 3 Hours"
+        }
+      ],
+      "metadata": {
+        "loadingPort": "Cat Lai Port / Hai Phong Port, Vietnam",
+        "packaging": "1kg Box, 10kg Master Carton with Inner Plastic Bag (Custom OEM Available)",
+        "shapes": "Cube (25x25x25mm, 26x26x26mm) / Hexagonal",
+        "minOrder": "1 x 20ft Container",
+        "leadTime": "15-20 days after payment"
+      },
+      "images": [
+        "images/charcoal-1.jpg",
+        "images/charcoal-2.jpg",
+        "images/charcoal-coa.jpg",
+        "images/charcoal-lab.jpg"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "High-Purity Quartz Stones",
+      "icon": "fa-gem",
+      "iconColor": "#4a90e2",
+      "category": "Minerals & Aggregates",
+      "shortDescription": "Premium quartz for industrial and engineered stone manufacturing",
+      "fullDescription": "Premium-grade natural quartz stones with exceptionally high silicon dioxide (SiO2) purity and excellent durability. Widely used for engineered stone manufacturing, industrial applications, and construction projects. Our quartz stones meet international standards and undergo rigorous quality testing.",
+      "features": [
+        "99%+ SiO2 purity",
+        "High durability and hardness",
+        "Consistent granule size",
+        "Low iron content",
+        "Suitable for engineered stone",
+        "Industrial grade quality"
+      ],
+      "specifications": [
+        {
+          "label": "SiO2 Purity",
+          "value": "99.0% Min"
+        },
+        {
+          "label": "Fe2O3 (Iron Oxide)",
+          "value": "0.01% Max"
+        },
+        {
+          "label": "Al2O3",
+          "value": "0.1% Max"
+        },
+        {
+          "label": "Size Availability",
+          "value": "Custom Crushed / Lump sizes"
+        }
+      ],
+      "metadata": {
+        "loadingPort": "Hai Phong Port, Vietnam",
+        "supplyAbility": "High Capacity / Monthly Container Contracts",
+        "incoterms": "FOB, CIF, CFR",
+        "minOrder": "1 x 20ft Container",
+        "leadTime": "10-15 days after payment"
+      },
+      "images": [
+        "images/quartz-1.jpg",
+        "images/quartz-2.jpg",
+        "images/quartz-certificate.jpg",
+        "images/quartz-lab.jpg"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Natural Dolomite Powder",
+      "icon": "fa-mountain",
+      "iconColor": "#a8a8a8",
+      "category": "Industrial Minerals",
+      "shortDescription": "Fine dolomite powder for agricultural and industrial applications",
+      "fullDescription": "High-quality natural dolomite powder processed from premium limestone deposits in Vietnam. Ideal for agricultural lime, animal feed, construction materials, and industrial applications. Our dolomite products are carefully graded and tested for purity and consistency.",
+      "features": [
+        "CaCO3 + MgCO3 rich composition",
+        "Fine particle size distribution",
+        "Low iron impurity",
+        "Suitable for agriculture",
+        "Industrial applications approved",
+        "Consistent quality batches"
+      ],
+      "specifications": [
+        {
+          "label": "CaO Content",
+          "value": "28% - 32%"
+        },
+        {
+          "label": "MgO Content",
+          "value": "18% - 22%"
+        },
+        {
+          "label": "Loss on Ignition",
+          "value": "45% - 48%"
+        },
+        {
+          "label": "Mesh Size",
+          "value": "100 Mesh (150 μm) Standard"
+        }
+      ],
+      "metadata": {
+        "loadingPort": "Hai Phong Port, Vietnam",
+        "supplyAbility": "High Capacity / Bulk Orders Welcome",
+        "incoterms": "FOB, CIF, CFR",
+        "minOrder": "1 x 20ft Container",
+        "leadTime": "12-18 days after payment"
+      },
+      "images": [
+        "images/dolomite-1.jpg",
+        "images/dolomite-2.jpg",
+        "images/dolomite-analysis.jpg",
+        "images/dolomite-packaging.jpg"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Calcined Lime (Quick Lime)",
+      "icon": "fa-fire-flame-curved",
+      "iconColor": "#ff6b6b",
+      "category": "Chemical & Construction",
+      "shortDescription": "High-purity calcined lime for construction and chemical industries",
+      "fullDescription": "Premium calcined lime (calcium oxide) produced from natural limestone through thermal calcination. Extensively used in construction, water treatment, steel manufacturing, and chemical industries. Our calcined lime meets international standards for purity and reactivity.",
+      "features": [
+        "High CaO content (85%+)",
+        "Fast reactivity",
+        "Low impurity levels",
+        "Suitable for construction",
+        "Water treatment grade",
+        "Industrial certified quality"
+      ],
+      "specifications": [
+        {
+          "label": "CaO Content",
+          "value": "85% - 90% Min"
+        },
+        {
+          "label": "MgO Content",
+          "value": "2% - 5% Max"
+        },
+        {
+          "label": "Residual CO2",
+          "value": "2% - 4% Max"
+        },
+        {
+          "label": "Available CaO",
+          "value": "80% Min"
+        }
+      ],
+      "metadata": {
+        "loadingPort": "Cat Lai Port / Hai Phong Port, Vietnam",
+        "supplyAbility": "Continuous Supply / Bulk Quantities",
+        "incoterms": "FOB, CIF, CFR",
+        "minOrder": "1 x 20ft Container",
+        "leadTime": "14-21 days after payment"
+      },
+      "images": [
+        "images/lime-1.jpg",
+        "images/lime-2.jpg",
+        "images/lime-test.jpg",
+        "images/lime-certification.jpg"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Premium Silica Gel Desiccant",
+      "icon": "fa-water-droplet",
+      "iconColor": "#00bcd4",
+      "category": "Specialty Products",
+      "shortDescription": "Industrial-grade silica gel for moisture absorption and storage",
+      "fullDescription": "High-efficiency silica gel desiccant beads for moisture control in packaging, storage, and industrial applications. Our silica gel products feature excellent absorption capacity, fast reactivation, and long shelf life. Ideal for protecting goods during shipping and storage.",
+      "features": [
+        "High absorption capacity",
+        "Multiple color indicators",
+        "Fast moisture absorption",
+        "Reusable and cost-effective",
+        "Food-grade options available",
+        "Eco-friendly disposal"
+      ],
+      "specifications": [
+        {
+          "label": "Moisture Absorption Capacity",
+          "value": "Up to 40% of weight"
+        },
+        {
+          "label": "Particle Size",
+          "value": "2-5mm diameter"
+        },
+        {
+          "label": "Bulk Density",
+          "value": "700-800 kg/m³"
+        },
+        {
+          "label": "Purity",
+          "value": "99.5% Min SiO2"
+        }
+      ],
+      "metadata": {
+        "loadingPort": "Hai Phong Port, Vietnam",
+        "supplyAbility": "Regular Supply / Custom Packaging",
+        "incoterms": "FOB, CIF, CFR",
+        "minOrder": "500kg (or 1 x 20ft Container)",
+        "leadTime": "10-14 days after payment"
+      },
+      "images": [
+        "images/silica-1.jpg",
+        "images/silica-2.jpg",
+        "images/silica-test.jpg",
+        "images/silica-packaging.jpg"
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Agricultural Limestone (CaCO3)",
+      "icon": "fa-leaf",
+      "iconColor": "#66bb6a",
+      "category": "Agricultural Products",
+      "shortDescription": "Premium agricultural limestone for soil amendment and pH correction",
+      "fullDescription": "Natural agricultural limestone powder designed to improve soil quality and correct soil acidity. Rich in calcium carbonate, it enhances soil structure, nutrient availability, and crop productivity. Widely used in organic farming and sustainable agriculture practices.",
+      "features": [
+        "High CaCO3 content (95%+)",
+        "Fine powder for easy application",
+        "Improves soil structure",
+        "Corrects soil pH",
+        "Enhances nutrient uptake",
+        "Organic farming approved"
+      ],
+      "specifications": [
+        {
+          "label": "CaCO3 Content",
+          "value": "95% - 99%"
+        },
+        {
+          "label": "MgCO3",
+          "value": "0.5% - 2%"
+        },
+        {
+          "label": "Loss on Ignition",
+          "value": "42% - 46%"
+        },
+        {
+          "label": "Fineness",
+          "value": "100 Mesh Standard"
+        }
+      ],
+      "metadata": {
+        "loadingPort": "Hai Phong Port, Vietnam",
+        "supplyAbility": "Bulk Orders / Seasonal Supply",
+        "incoterms": "FOB, CIF, CFR",
+        "minOrder": "1 x 20ft Container",
+        "leadTime": "10-15 days after payment"
+      },
+      "images": [
+        "images/ag-limestone-1.jpg",
+        "images/ag-limestone-2.jpg",
+        "images/ag-limestone-field.jpg",
+        "images/ag-limestone-analysis.jpg"
+      ]
+    }
+  ]
+}
