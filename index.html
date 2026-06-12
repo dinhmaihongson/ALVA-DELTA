@@ -21,7 +21,7 @@
             --secondary-color: #2a9d8f;
             --accent-color: #e76f51;
             --text-color: #333;
-            --light-bg: #f8f9fa;
+            --light-bg: #ecf1f7;
             --white: #ffffff;
         }
 
@@ -57,11 +57,11 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 10px 20px;
+            padding: 5px 20px;
         }
 
         .logo img {
-            height: 100px;
+            height: 120px;
             display: block;
         }
 
@@ -186,17 +186,17 @@
         /* About Us Section with Director */
         .about-grid {
             display: grid;
-            grid-template-columns: 1fr 2fr;
+            grid-template-columns: 2fr 1fr;
             gap: 40px;
-            align-items: center;
+            align-items: start;
         }
 
         .director-card {
             background: var(--light-bg);
-            padding: 20px;
-            border-radius: 10px;
-            text-align: center;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            padding: 30px 25px;
+            border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+            text-align: left;
         }
 
         .director-card img {
@@ -205,30 +205,48 @@
             height: 220px;
             object-fit: cover;
             border-radius: 50%;
-            margin-bottom: 15px;
+            margin: 0 auto 20px;
             border: 5px solid var(--white);
             box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            display: block;
         }
 
         .director-card h3 {
             color: var(--primary-color);
-            font-size: 1.25rem;
+            font-size: 1.4rem;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
 
         .director-card p {
-            color: var(--secondary-color);
-            font-weight: 600;
-            font-size: 0.95rem;
+            color: var(--text-color);
+            font-size: 0.98rem;
+            line-height: 1.8;
+            margin-bottom: 14px;
+        }
+
+        .director-card strong {
+            color: var(--primary-color);
         }
 
         .about-text h2 {
             color: var(--primary-color);
-            margin-bottom: 15px;
+            margin-bottom: 20px;
+            font-size: 2rem;
+        }
+
+        .about-text h3 {
+            margin-top: 24px;
+            margin-bottom: 12px;
+            color: var(--primary-color);
+            font-size: 1.1rem;
         }
 
         .about-text p {
-            margin-bottom: 15px;
+            margin-bottom: 18px;
             text-align: justify;
+            line-height: 1.8;
         }
 
         /* Why Choose Us Section */
@@ -462,7 +480,7 @@
         footer {
             background-color: var(--primary-color);
             color: var(--white);
-            padding: 40px 20px;
+            padding: 30px 20px;
             text-align: center;
         }
 
@@ -470,6 +488,64 @@
             height: 120px;
             margin-bottom: 15px;
         }
+
+        /* Slideshow / Gallery styles */
+        .slideshow {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            margin-top: 15px;
+        }
+
+        .slideshow .slides {
+            width: 100%;
+            max-width: 560px;
+            height: 320px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .slideshow .slide {
+            position: absolute;
+            inset: 0;
+            display: none;
+        }
+
+        .slideshow .slide.active {
+            display: block;
+        }
+
+        .slideshow .slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 6px;
+            display: block;
+        }
+
+        .slideshow .prev,
+        .slideshow .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0,0,0,0.45);
+            color: #fff;
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            font-size: 20px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 5;
+        }
+
+        .slideshow .prev { left: 8px; }
+        .slideshow .next { right: 8px; }
 
         /* Responsive Breakpoints */
         @media (max-width: 968px) {
@@ -495,6 +571,7 @@
             footer img {
                 height: 80px;
             }
+            .slideshow .slides { height: 200px; }
         }
     </style>
 </head>
@@ -521,9 +598,9 @@
     <section id="home" class="hero">
         <div class="hero-overlay"></div>
         <div class="hero-content">
-            <h1>Delivering Premium Quality Beyond Borders</h1>
-            <p>Trusted Global Export Partner from Vietnam for Minerals, Charcoal, and Premium Agricultural Products</p>
-            <a href="#contact" class="btn">Inquire Now</a>
+            <h1>Connecting Vietnam Exports to the World</h1>
+            <p>ALVA DELTA delivers quality-certified charcoal, quartz, and premium agricultural products for international B2B partners.</p>
+            <a href="#contact" class="btn">Contact Us Now</a>
         </div>
     </section>
 
@@ -531,16 +608,23 @@
     <section id="about">
         <div class="section-title">About Our Company</div>
         <div class="about-grid">
+            <div class="about-text">
+                <h2>ALVA DELTA COMPANY LIMITED</h2>
+                <p>Headquartered in Bac Ninh, Vietnam, <strong>ALVA DELTA COMPANY LIMITED</strong> is a prestigious international trading and export enterprise. We take pride in bridging rich local resources with global commercial demands through B2B export solutions.</p>
+                <h3>What We Do</h3>
+                <p>We specialize in exporting high-quality coconut shell charcoal, premium quartz stone, and select agricultural products with strict quality control and trusted international logistics.</p>
+                <h3>Global Reach</h3>
+                <p>Our network spans Asia, Europe, and beyond, with a focus on reliable delivery, certified laboratory testing, and tailored OEM packaging for global buyers.</p>
+                <h3>Our Value</h3>
+                <p>We commit to long-term partnerships built on transparency, responsibility, and consistent product quality for B2B customers worldwide.</p>
+            </div>
             <div class="director-card">
                 <img src="images/Avatar.png" alt="Ms. Ngo Thi Thao (Merry)">
                 <h3>Ms. Ngo Thi Thao (Merry)</h3>
                 <p>Managing Director</p>
-            </div>
-            <div class="about-text">
-                <h2>ALVA DELTA COMPANY LIMITED</h2>
-                <p>Headquartered in Bac Ninh, Vietnam, <strong>ALVA DELTA COMPANY LIMITED</strong> is a prestigious international trading and export enterprise. We take pride in bridging rich local resources with global commercial demands through B2B export solutions.</p>
-                <p>We specialize leadingly in High-Quality Minerals alongside a selective portfolio of Premium Vietnamese Agricultural Products. Driven by global standards, strict quality control mechanisms, and customer-centric service, we have cultivated a reliable reputation in international markets.</p>
-                <p>Under professional management, we aim to establish long-term, trust-based business relationships worldwide by delivering uncompromising quality and timely execution.</p>
+                <p>Ms. Merry brings extensive experience in international trade and export operations, leading ALVA DELTA with a focus on premium product quality and customer trust.</p>
+                <p><strong>Contact:</strong> +84 877580504</p>
+                <p><strong>Email:</strong> Alva.Delta8499@gmail.com</p>
             </div>
         </div>
     </section>
@@ -573,23 +657,21 @@
     <section id="products">
         <div class="section-title">Our Products Portfolio</div>
 
-        <!-- PRODUCT 1: THAN SHISHA (SẢN PHẨM CHỦ LỰC) -->
+        <!-- PRODUCT 1: PREMIUM COCONUT SHELL CHARCOAL (FRAMED LAYOUT) -->
         <div class="product-card">
             <div class="product-header-grid">
                 <div class="product-info">
                     <h3><i class="fa-solid fa-fire" style="color: var(--accent-color);"></i> Premium Coconut Shell Charcoal Briquettes</h3>
-                    <p>Specially manufactured for high-end Shisha/Hookah and premium BBQ heating application. Made from 100% natural sustainable eco-friendly premium coconut shells from Vietnam. This product is carefully selected and processed to ensure consistent quality and optimal burning performance.</p>
-                    
+                    <p>Specially manufactured for high-end Shisha/Hookah and premium BBQ applications. Made from 100% natural coconut shells, processed for consistent quality and optimal burning.</p>
                     <div class="product-meta">
-                        <p><strong><i class="fa-solid fa-anchor"></i> Loading Port:</strong> Cat Lai Port / Hai Phong Port, Vietnam</p>
-                        <p><strong><i class="fa-solid fa-box-open"></i> Packaging:</strong> 1kg Box, 10kg Master Carton with Inner Plastic Bag (Custom OEM Available)</p>
-                        <p><strong><i class="fa-solid fa-shapes"></i> Shapes:</strong> Cube (25x25x25mm, 26x26x26mm) / Hexagonal</p>
+                        <p><strong><i class="fa-solid fa-anchor"></i> Loading Port:</strong> Cat Lai / Hai Phong, Vietnam</p>
+                        <p><strong><i class="fa-solid fa-box-open"></i> Packaging:</strong> 1kg box / 10kg master carton (OEM available)</p>
+                        <p><strong><i class="fa-solid fa-shapes"></i> Shapes:</strong> Cube, Hexagonal</p>
                     </div>
                 </div>
-                
                 <div>
                     <h4>Technical Specifications (Lab Tested)</h4>
-                    <table class="specs-table">
+                    <table class="specs-table" style="margin-top: 15px;">
                         <tr><td><strong>Fixed Carbon</strong></td><td>80% - 85% Min</td></tr>
                         <tr><td><strong>Ash Content</strong></td><td>2.5% - 3% Max</td></tr>
                         <tr><td><strong>Moisture</strong></td><td>5% - 6% Max</td></tr>
@@ -599,55 +681,407 @@
                 </div>
             </div>
 
-            <!-- Bố cục Thư viện ảnh sản phẩm thực tế kết hợp COA/Test mẫu -->
             <h4>Product Gallery & Quality Certificates</h4>
-            <div class="product-gallery">
-                <div class="gallery-item">
-                    <img src="images/thanshisha1.jpg" alt="Charcoal Briquette Showcase">
-                    <div class="gallery-label">Product Showcase</div>
+            <div class="product-gallery slideshow" data-gallery="coconut-shell">
+                <div class="slides">
+                    <div class="slide active"><img src="images/thanshisha1.jpg" alt="Charcoal Showcase"></div>
+                    <div class="slide"><img src="images/thanshisha1.jpg" alt="Charcoal Mass Production"></div>
+                    <div class="slide"><img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=800&q=80" alt="COA Certificate"></div>
+                    <div class="slide"><img src="https://images.unsplash.com/photo-1532187863486-abf9d39d6618?auto=format&fit=crop&w=800&q=80" alt="Lab Test Result"></div>
+                    <div class="slide"><img src="https://picsum.photos/seed/coconut5/800/500" alt="Charcoal Detail"></div>
                 </div>
-                <div class="gallery-item">
-                    <!-- Ảnh than thứ 2 (Nếu bạn tải thêm ảnh thì đổi tên tại đây, hiện tại tạm lặp lại ảnh 1 hoặc để trống) -->
-                    <img src="images/thanshisha1.jpg" alt="Charcoal Mass Production">
-                    <div class="gallery-label">Mass Production</div>
-                </div>
-                <div class="gallery-item">
-                    <!-- Khu vực để bạn tải ảnh chứng nhận phân tích COA lên sau này -->
-                    <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=500&q=80" alt="Charcoal COA Report">
-                    <div class="gallery-label">COA Certificate</div>
-                </div>
-                <div class="gallery-item">
-                    <!-- Khu vực để bạn tải ảnh kết quả kiểm nghiệm mẫu SGS/Lab lên sau này -->
-                    <img src="https://images.unsplash.com/photo-1532187863486-abf9d39d6618?auto=format&fit=crop&w=500&q=80" alt="Charcoal Lab Test Result">
-                    <div class="gallery-label">Lab Test Results</div>
-                </div>
+                <button class="prev" aria-label="Previous">‹</button>
+                <button class="next" aria-label="Next">›</button>
             </div>
         </div>
 
-        <!-- PRODUCT 2: QUARTZ STONES -->
+        <!-- PRODUCT 2: HIGH-PURITY QUARTZ STONES (FRAMED LAYOUT) -->
         <div class="product-card">
             <div class="product-header-grid">
                 <div class="product-info">
                     <h3><i class="fa-solid fa-gem" style="color: #4a90e2;"></i> High-Purity Quartz Stones</h3>
-                    <p>Premium-grade natural quartz stones with exceptionally high silicon dioxide (SiO2) purity and excellent durability, widely used for engineered stone manufacturing, industrial applications, and construction projects. Our quartz stones meet international standards and undergo rigorous quality testing.</p>
+                    <p>Premium-grade natural quartz with high SiO2 purity, suitable for engineered stone, industrial, and construction applications. Subjected to strict quality testing.</p>
                     <div class="product-meta">
-                        <p><strong><i class="fa-solid fa-anchor"></i> Loading Port:</strong> Hai Phong Port, Vietnam</p>
-                        <p><strong><i class="fa-solid fa-box-open"></i> Supply Ability:</strong> High Capacity / Monthly Container Contracts</p>
+                        <p><strong><i class="fa-solid fa-anchor"></i> Loading Port:</strong> Hai Phong, Vietnam</p>
+                        <p><strong><i class="fa-solid fa-box-open"></i> Supply Ability:</strong> High / Monthly Contracts</p>
                         <p><strong><i class="fa-solid fa-handshake"></i> Incoterms:</strong> FOB, CIF, CFR</p>
                     </div>
                 </div>
                 <div>
-                    <table class="specs-table" style="margin-top: 35px;">
+                    <h4>Technical Specifications</h4>
+                    <table class="specs-table" style="margin-top: 15px;">
                         <tr><td><strong>SiO2 Purity</strong></td><td>99.0% Min</td></tr>
                         <tr><td><strong>Fe2O3</strong></td><td>0.01% Max</td></tr>
-                        <tr><td><strong>Size Availability</strong></td><td>Custom Crushed / Lump sizes available</td></tr>
+                        <tr><td><strong>Size Availability</strong></td><td>Custom crushed / lump sizes</td></tr>
                     </table>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- Contact Section -->
+            <h4>Product Gallery & Quality Certificates</h4>
+            <div class="product-gallery slideshow" data-gallery="quartz">
+                <div class="slides">
+                    <div class="slide active"><img src="https://picsum.photos/seed/quartz1/800/500" alt="Quartz 1"></div>
+                    <div class="slide"><img src="https://picsum.photos/seed/quartz2/800/500" alt="Quartz 2"></div>
+                    <div class="slide"><img src="https://picsum.photos/seed/quartz3/800/500" alt="Quartz 3"></div>
+                    <div class="slide"><img src="https://picsum.photos/seed/quartz4/800/500" alt="Quartz 4"></div>
+                    <div class="slide"><img src="https://picsum.photos/seed/quartz5/800/500" alt="Quartz 5"></div>
+                </div>
+                <button class="prev" aria-label="Previous">‹</button>
+                <button class="next" aria-label="Next">›</button>
+            </div>
+        </div>
+            <!-- Additional Test Products (Test 1 - Test 10) - framed like Coconut Shell product -->
+            <!-- Each product shows product-info + product-meta on the left, specs on the right, and a gallery below -->
+            
+            <!-- Template used for each Test product -->
+            
+            <div class="product-card">
+                <div class="product-header-grid">
+                    <div class="product-info">
+                        <h3>Test 1</h3>
+                        <p>Sample product entry for Test 1.</p>
+                        <div class="product-meta">
+                            <p><strong><i class="fa-solid fa-anchor"></i> Loading Port:</strong> Hai Phong / Cat Lai</p>
+                            <p><strong><i class="fa-solid fa-box-open"></i> Packaging:</strong> Standard Carton</p>
+                            <p><strong><i class="fa-solid fa-shapes"></i> Shapes:</strong> N/A</p>
+                        </div>
+                    </div>
+                    <div>
+                        <h4>Technical Specifications</h4>
+                        <table class="specs-table" style="margin-top: 15px;">
+                            <tr><td><strong>Spec</strong></td><td>Value</td></tr>
+                        </table>
+                    </div>
+                </div>
+
+                <h4>Product Gallery & Quality Certificates</h4>
+                <div class="product-gallery">
+                    <div class="slideshow" data-gallery="test1">
+                        <div class="slides">
+                            <div class="slide active"><img src="https://picsum.photos/seed/test1-1/800/500" alt="Test 1 image 1"></div>
+                            <div class="slide"><img src="https://picsum.photos/seed/test1-2/800/500" alt="Test 1 image 2"></div>
+                            <div class="slide"><img src="https://picsum.photos/seed/test1-3/800/500" alt="Test 1 image 3"></div>
+                            <div class="slide"><img src="https://picsum.photos/seed/test1-4/800/500" alt="Test 1 image 4"></div>
+                            <div class="slide"><img src="https://picsum.photos/seed/test1-5/800/500" alt="Test 1 image 5"></div>
+                        </div>
+                        <button class="prev" aria-label="Previous">‹</button>
+                        <button class="next" aria-label="Next">›</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-header-grid">
+                    <div class="product-info">
+                        <h3>Test 2</h3>
+                        <p>Sample product entry for Test 2.</p>
+                        <div class="product-meta">
+                            <p><strong><i class="fa-solid fa-anchor"></i> Loading Port:</strong> Hai Phong / Cat Lai</p>
+                            <p><strong><i class="fa-solid fa-box-open"></i> Packaging:</strong> Standard Carton</p>
+                            <p><strong><i class="fa-solid fa-shapes"></i> Shapes:</strong> N/A</p>
+                        </div>
+                    </div>
+                    <div>
+                        <h4>Technical Specifications</h4>
+                        <table class="specs-table" style="margin-top: 15px;">
+                            <tr><td><strong>Spec</strong></td><td>Value</td></tr>
+                        </table>
+                    </div>
+                </div>
+
+                <h4>Product Gallery & Quality Certificates</h4>
+                <div class="product-gallery">
+                    <div class="slideshow" data-gallery="test2">
+                        <div class="slides">
+                            <div class="slide active"><img src="https://picsum.photos/seed/test2-1/800/500" alt="Test 2 image 1"></div>
+                            <div class="slide"><img src="https://picsum.photos/seed/test2-2/800/500" alt="Test 2 image 2"></div>
+                            <div class="slide"><img src="https://picsum.photos/seed/test2-3/800/500" alt="Test 2 image 3"></div>
+                            <div class="slide"><img src="https://picsum.photos/seed/test2-4/800/500" alt="Test 2 image 4"></div>
+                            <div class="slide"><img src="https://picsum.photos/seed/test2-5/800/500" alt="Test 2 image 5"></div>
+                        </div>
+                        <button class="prev" aria-label="Previous">‹</button>
+                        <button class="next" aria-label="Next">›</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Repeat same framed layout for Tests 3-10 -->
+            
+            <div class="product-card">
+                <div class="product-header-grid">
+                    <div class="product-info">
+                        <h3>Test 3</h3>
+                        <p>Sample product entry for Test 3.</p>
+                        <div class="product-meta">
+                            <p><strong><i class="fa-solid fa-anchor"></i> Loading Port:</strong> Hai Phong / Cat Lai</p>
+                            <p><strong><i class="fa-solid fa-box-open"></i> Packaging:</strong> Standard Carton</p>
+                            <p><strong><i class="fa-solid fa-shapes"></i> Shapes:</strong> N/A</p>
+                        </div>
+                    </div>
+                    <div>
+                        <h4>Technical Specifications</h4>
+                        <table class="specs-table" style="margin-top: 15px;">
+                            <tr><td><strong>Spec</strong></td><td>Value</td></tr>
+                        </table>
+                    </div>
+                </div>
+                <h4>Product Gallery & Quality Certificates</h4>
+                <div class="product-gallery">
+                    <div class="slideshow" data-gallery="test3">
+                        <div class="slides">
+                            <div class="slide active"><img src="https://picsum.photos/seed/test3-1/800/500" alt="Test 3 image 1"></div>
+                            <div class="slide"><img src="https://picsum.photos/seed/test3-2/800/500" alt="Test 3 image 2"></div>
+                            <div class="slide"><img src="https://picsum.photos/seed/test3-3/800/500" alt="Test 3 image 3"></div>
+                            <div class="slide"><img src="https://picsum.photos/seed/test3-4/800/500" alt="Test 3 image 4"></div>
+                            <div class="slide"><img src="https://picsum.photos/seed/test3-5/800/500" alt="Test 3 image 5"></div>
+                        </div>
+                        <button class="prev" aria-label="Previous">‹</button>
+                        <button class="next" aria-label="Next">›</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-header-grid">
+                    <div class="product-info">
+                        <h3>Test 4</h3>
+                        <p>Sample product entry for Test 4.</p>
+                        <div class="product-meta">
+                            <p><strong><i class="fa-solid fa-anchor"></i> Loading Port:</strong> Hai Phong / Cat Lai</p>
+                            <p><strong><i class="fa-solid fa-box-open"></i> Packaging:</strong> Standard Carton</p>
+                            <p><strong><i class="fa-solid fa-shapes"></i> Shapes:</strong> N/A</p>
+                        </div>
+                    </div>
+                    <div>
+                        <h4>Technical Specifications</h4>
+                        <table class="specs-table" style="margin-top: 15px;">
+                            <tr><td><strong>Spec</strong></td><td>Value</td></tr>
+                        </table>
+                    </div>
+                </div>
+                <h4>Product Gallery & Quality Certificates</h4>
+                <div class="product-gallery">
+                    <div class="slideshow" data-gallery="test4">
+                        <div class="slides">
+                            <div class="slide active"><img src="https://picsum.photos/seed/test4-1/800/500" alt="Test 4 image 1"></div>
+                            <div class="slide"><img src="https://picsum.photos/seed/test4-2/800/500" alt="Test 4 image 2"></div>
+                            <div class="slide"><img src="https://picsum.photos/seed/test4-3/800/500" alt="Test 4 image 3"></div>
+                            <div class="slide"><img src="https://picsum.photos/seed/test4-4/800/500" alt="Test 4 image 4"></div>
+                            <div class="slide"><img src="https://picsum.photos/seed/test4-5/800/500" alt="Test 4 image 5"></div>
+                        </div>
+                        <button class="prev" aria-label="Previous">‹</button>
+                        <button class="next" aria-label="Next">›</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-header-grid">
+                    <div class="product-info">
+                        <h3>Test 5</h3>
+                        <p>Sample product entry for Test 5.</p>
+                        <div class="product-meta">
+                            <p><strong><i class="fa-solid fa-anchor"></i> Loading Port:</strong> Hai Phong / Cat Lai</p>
+                            <p><strong><i class="fa-solid fa-box-open"></i> Packaging:</strong> Standard Carton</p>
+                            <p><strong><i class="fa-solid fa-shapes"></i> Shapes:</strong> N/A</p>
+                        </div>
+                    </div>
+                    <div>
+                        <h4>Technical Specifications</h4>
+                        <table class="specs-table" style="margin-top: 15px;">
+                            <tr><td><strong>Spec</strong></td><td>Value</td></tr>
+                        </table>
+                    </div>
+                </div>
+                <h4>Product Gallery & Quality Certificates</h4>
+                <div class="product-gallery">
+                    <div class="slideshow" data-gallery="test5">
+                        <div class="slides">
+                            <div class="slide active"><img src="https://picsum.photos/seed/test5-1/800/500" alt="Test 5 image 1"></div>
+                            <div class="slide"><img src="https://picsum.photos/seed/test5-2/800/500" alt="Test 5 image 2"></div>
+                            <div class="slide"><img src="https://picsum.photos/seed/test5-3/800/500" alt="Test 5 image 3"></div>
+                            <div class="slide"><img src="https://picsum.photos/seed/test5-4/800/500" alt="Test 5 image 4"></div>
+                            <div class="slide"><img src="https://picsum.photos/seed/test5-5/800/500" alt="Test 5 image 5"></div>
+                        </div>
+                        <button class="prev" aria-label="Previous">‹</button>
+                        <button class="next" aria-label="Next">›</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-header-grid">
+                    <div class="product-info">
+                        <h3>Test 6</h3>
+                        <p>Sample product entry for Test 6.</p>
+                        <div class="product-meta">
+                            <p><strong><i class="fa-solid fa-anchor"></i> Loading Port:</strong> Hai Phong / Cat Lai</p>
+                            <p><strong><i class="fa-solid fa-box-open"></i> Packaging:</strong> Standard Carton</p>
+                            <p><strong><i class="fa-solid fa-shapes"></i> Shapes:</strong> N/A</p>
+                        </div>
+                    </div>
+                    <div>
+                        <h4>Technical Specifications</h4>
+                        <table class="specs-table" style="margin-top: 15px;">
+                            <tr><td><strong>Spec</strong></td><td>Value</td></tr>
+                        </table>
+                    </div>
+                </div>
+                <h4>Product Gallery & Quality Certificates</h4>
+                <div class="product-gallery">
+                    <div class="slideshow" data-gallery="test6">
+                        <div class="slides">
+                            <div class="slide active"><img src="https://picsum.photos/seed/test6-1/800/500" alt="Test 6 image 1"></div>
+                            <div class="slide"><img src="https://picsum.photos/seed/test6-2/800/500" alt="Test 6 image 2"></div>
+                            <div class="slide"><img src="https://picsum.photos/seed/test6-3/800/500" alt="Test 6 image 3"></div>
+                            <div class="slide"><img src="https://picsum.photos/seed/test6-4/800/500" alt="Test 6 image 4"></div>
+                            <div class="slide"><img src="https://picsum.photos/seed/test6-5/800/500" alt="Test 6 image 5"></div>
+                        </div>
+                        <button class="prev" aria-label="Previous">‹</button>
+                        <button class="next" aria-label="Next">›</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-header-grid">
+                    <div class="product-info">
+                        <h3>Test 7</h3>
+                        <p>Sample product entry for Test 7.</p>
+                        <div class="product-meta">
+                            <p><strong><i class="fa-solid fa-anchor"></i> Loading Port:</strong> Hai Phong / Cat Lai</p>
+                            <p><strong><i class="fa-solid fa-box-open"></i> Packaging:</strong> Standard Carton</p>
+                            <p><strong><i class="fa-solid fa-shapes"></i> Shapes:</strong> N/A</p>
+                        </div>
+                    </div>
+                    <div>
+                        <h4>Technical Specifications</h4>
+                        <table class="specs-table" style="margin-top: 15px;">
+                            <tr><td><strong>Spec</strong></td><td>Value</td></tr>
+                        </table>
+                    </div>
+                </div>
+                <h4>Product Gallery & Quality Certificates</h4>
+                <div class="product-gallery">
+                    <div class="slideshow" data-gallery="test7">
+                        <div class="slides">
+                            <div class="slide active"><img src="https://picsum.photos/seed/test7-1/800/500" alt="Test 7 image 1"></div>
+                            <div class="slide"><img src="https://picsum.photos/seed/test7-2/800/500" alt="Test 7 image 2"></div>
+                            <div class="slide"><img src="https://picsum.photos/seed/test7-3/800/500" alt="Test 7 image 3"></div>
+                            <div class="slide"><img src="https://picsum.photos/seed/test7-4/800/500" alt="Test 7 image 4"></div>
+                            <div class="slide"><img src="https://picsum.photos/seed/test7-5/800/500" alt="Test 7 image 5"></div>
+                        </div>
+                        <button class="prev" aria-label="Previous">‹</button>
+                        <button class="next" aria-label="Next">›</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-header-grid">
+                    <div class="product-info">
+                        <h3>Test 8</h3>
+                        <p>Sample product entry for Test 8.</p>
+                        <div class="product-meta">
+                            <p><strong><i class="fa-solid fa-anchor"></i> Loading Port:</strong> Hai Phong / Cat Lai</p>
+                            <p><strong><i class="fa-solid fa-box-open"></i> Packaging:</strong> Standard Carton</p>
+                            <p><strong><i class="fa-solid fa-shapes"></i> Shapes:</strong> N/A</p>
+                        </div>
+                    </div>
+                    <div>
+                        <h4>Technical Specifications</h4>
+                        <table class="specs-table" style="margin-top: 15px;">
+                            <tr><td><strong>Spec</strong></td><td>Value</td></tr>
+                        </table>
+                    </div>
+                </div>
+                <h4>Product Gallery & Quality Certificates</h4>
+                <div class="product-gallery">
+                    <div class="slideshow" data-gallery="test8">
+                        <div class="slides">
+                            <div class="slide active"><img src="https://picsum.photos/seed/test8-1/800/500" alt="Test 8 image 1"></div>
+                            <div class="slide"><img src="https://picsum.photos/seed/test8-2/800/500" alt="Test 8 image 2"></div>
+                            <div class="slide"><img src="https://picsum.photos/seed/test8-3/800/500" alt="Test 8 image 3"></div>
+                            <div class="slide"><img src="https://picsum.photos/seed/test8-4/800/500" alt="Test 8 image 4"></div>
+                            <div class="slide"><img src="https://picsum.photos/seed/test8-5/800/500" alt="Test 8 image 5"></div>
+                        </div>
+                        <button class="prev" aria-label="Previous">‹</button>
+                        <button class="next" aria-label="Next">›</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-header-grid">
+                    <div class="product-info">
+                        <h3>Test 9</h3>
+                        <p>Sample product entry for Test 9.</p>
+                        <div class="product-meta">
+                            <p><strong><i class="fa-solid fa-anchor"></i> Loading Port:</strong> Hai Phong / Cat Lai</p>
+                            <p><strong><i class="fa-solid fa-box-open"></i> Packaging:</strong> Standard Carton</p>
+                            <p><strong><i class="fa-solid fa-shapes"></i> Shapes:</strong> N/A</p>
+                        </div>
+                    </div>
+                    <div>
+                        <h4>Technical Specifications</h4>
+                        <table class="specs-table" style="margin-top: 15px;">
+                            <tr><td><strong>Spec</strong></td><td>Value</td></tr>
+                        </table>
+                    </div>
+                </div>
+                <h4>Product Gallery & Quality Certificates</h4>
+                <div class="product-gallery">
+                    <div class="slideshow" data-gallery="test9">
+                        <div class="slides">
+                            <div class="slide active"><img src="https://picsum.photos/seed/test9-1/800/500" alt="Test 9 image 1"></div>
+                            <div class="slide"><img src="https://picsum.photos/seed/test9-2/800/500" alt="Test 9 image 2"></div>
+                            <div class="slide"><img src="https://picsum.photos/seed/test9-3/800/500" alt="Test 9 image 3"></div>
+                            <div class="slide"><img src="https://picsum.photos/seed/test9-4/800/500" alt="Test 9 image 4"></div>
+                            <div class="slide"><img src="https://picsum.photos/seed/test9-5/800/500" alt="Test 9 image 5"></div>
+                        </div>
+                        <button class="prev" aria-label="Previous">‹</button>
+                        <button class="next" aria-label="Next">›</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-header-grid">
+                    <div class="product-info">
+                        <h3>Test 10</h3>
+                        <p>Sample product entry for Test 10.</p>
+                        <div class="product-meta">
+                            <p><strong><i class="fa-solid fa-anchor"></i> Loading Port:</strong> Hai Phong / Cat Lai</p>
+                            <p><strong><i class="fa-solid fa-box-open"></i> Packaging:</strong> Standard Carton</p>
+                            <p><strong><i class="fa-solid fa-shapes"></i> Shapes:</strong> N/A</p>
+                        </div>
+                    </div>
+                    <div>
+                        <h4>Technical Specifications</h4>
+                        <table class="specs-table" style="margin-top: 15px;">
+                            <tr><td><strong>Spec</strong></td><td>Value</td></tr>
+                        </table>
+                    </div>
+                </div>
+                <h4>Product Gallery & Quality Certificates</h4>
+                <div class="product-gallery">
+                    <div class="slideshow" data-gallery="test10">
+                        <div class="slides">
+                            <div class="slide active"><img src="https://picsum.photos/seed/test10-1/800/500" alt="Test 10 image 1"></div>
+                            <div class="slide"><img src="https://picsum.photos/seed/test10-2/800/500" alt="Test 10 image 2"></div>
+                            <div class="slide"><img src="https://picsum.photos/seed/test10-3/800/500" alt="Test 10 image 3"></div>
+                            <div class="slide"><img src="https://picsum.photos/seed/test10-4/800/500" alt="Test 10 image 4"></div>
+                            <div class="slide"><img src="https://picsum.photos/seed/test10-5/800/500" alt="Test 10 image 5"></div>
+                        </div>
+                        <button class="prev" aria-label="Previous">‹</button>
+                        <button class="next" aria-label="Next">›</button>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Contact Section -->
     <section id="contact" style="background-color: var(--white);">
         <div class="section-title">Get In Touch</div>
         <div class="contact-grid">
@@ -700,6 +1134,32 @@
     <a href="https://wa.me/84877580504" class="whatsapp-sticky" target="_blank">
         <i class="fa-brands fa-whatsapp"></i>
     </a>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.querySelectorAll('.slideshow').forEach(function (slideshow) {
+                const slides = Array.from(slideshow.querySelectorAll('.slide'));
+                if (!slides.length) return;
+                let idx = slides.findIndex(s => s.classList.contains('active'));
+                if (idx === -1) idx = 0;
+                slides.forEach((s, i) => s.classList.toggle('active', i === idx));
+
+                const show = function (newIndex) {
+                    slides[idx].classList.remove('active');
+                    idx = (newIndex + slides.length) % slides.length;
+                    slides[idx].classList.add('active');
+                };
+
+                const prev = slideshow.querySelector('.prev');
+                const next = slideshow.querySelector('.next');
+                if (prev) prev.addEventListener('click', function (e) { e.preventDefault(); show(idx - 1); });
+                if (next) next.addEventListener('click', function (e) { e.preventDefault(); show(idx + 1); });
+
+                // allow clicking image to go next
+                slides.forEach(s => s.addEventListener('click', function () { show(idx + 1); }));
+            });
+        });
+    </script>
 
     <!-- Footer -->
     <footer>
