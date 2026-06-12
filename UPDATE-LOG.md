@@ -17,7 +17,7 @@
 - `css/validation-styles.css` - Styling for validation states
 
 **Features:**
-- Name validation (min 3 characters, no special characters)
+- Name validation (min 3 characters, allow common punctuation: & . , - ' ( ) )
 - Email validation (RFC 5322 compliant)
 - Message validation (10-2000 characters)
 - Blur and real-time input validation

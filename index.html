@@ -566,79 +566,7 @@
     <!-- Products Portfolio Section -->
     <section id="products">
         <div class="section-title">Our Products Portfolio</div>
-
-        <!-- PRODUCT 1: THAN SHISHA (SẢN PHẨM CHỦ LỰC) -->
-        <div class="product-card">
-            <div class="product-header-grid">
-                <div class="product-info">
-                    <h3><i class="fa-solid fa-fire" style="color: var(--accent-color);"></i> Premium Coconut Shell Charcoal Briquettes</h3>
-                    <p>Specially manufactured for high-end Shisha/Hookah and premium BBQ heating application. Made from 100% natural sustainable eco-friendly premium coconut shells from Vietnam. Featu[...]
-                    
-                    <div class="product-meta">
-                        <p><strong><i class="fa-solid fa-anchor"></i> Loading Port:</strong> Cat Lai Port / Hai Phong Port, Vietnam</p>
-                        <p><strong><i class="fa-solid fa-box-open"></i> Packaging:</strong> 1kg Box, 10kg Master Carton with Inner Plastic Bag (Custom OEM Available)</p>
-                        <p><strong><i class="fa-solid fa-shapes"></i> Shapes:</strong> Cube (25x25x25mm, 26x26x26mm) / Hexagonal</p>
-                    </div>
-                </div>
-                
-                <div>
-                    <h4>Technical Specifications (Lab Tested)</h4>
-                    <table class="specs-table">
-                        <tr><td><strong>Fixed Carbon</strong></td><td>80% - 85% Min</td></tr>
-                        <tr><td><strong>Ash Content</strong></td><td>2.5% - 3% Max</td></tr>
-                        <tr><td><strong>Moisture</strong></td><td>5% - 6% Max</td></tr>
-                        <tr><td><strong>Volatile Matter</strong></td><td>12% - 15% Max</td></tr>
-                        <tr><td><strong>Burning Time</strong></td><td>2.5 - 3 Hours</td></tr>
-                    </table>
-                </div>
-            </div>
-
-            <!-- Bố cục Thư viện ảnh sản phẩm thực tế kết hợp COA/Test mẫu -->
-            <h4>Product Gallery & Quality Certificates</h4>
-            <div class="product-gallery">
-                <div class="gallery-item">
-                    <img src="images/thanshisha1.jpg" alt="Charcoal Briquette Showcase">
-                    <div class="gallery-label">Product Showcase</div>
-                </div>
-                <div class="gallery-item">
-                    <!-- Ảnh than thứ 2 (Nếu bạn tải thêm ảnh thì đổi tên tại đây, hiện tại tạm lặp lại ảnh 1 hoặc để trống) -->
-                    <img src="images/thanshisha1.jpg" alt="Charcoal Mass Production">
-                    <div class="gallery-label">Mass Production</div>
-                </div>
-                <div class="gallery-item">
-                    <!-- Khu vực để bạn tải ảnh chứng nhận phân tích COA lên sau này -->
-                    <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=500&q=80" alt="Charcoal COA Report">
-                    <div class="gallery-label">COA Certificate</div>
-                </div>
-                <div class="gallery-item">
-                    <!-- Khu vực để bạn tải ảnh kết quả kiểm nghiệm mẫu SGS/Lab lên sau này -->
-                    <img src="https://images.unsplash.com/photo-1532187863486-abf9d39d6618?auto=format&fit=crop&w=500&q=80" alt="Charcoal Lab Test Result">
-                    <div class="gallery-label">Lab Test Results</div>
-                </div>
-            </div>
-        </div>
-
-        <!-- PRODUCT 2: QUARTZ STONES -->
-        <div class="product-card">
-            <div class="product-header-grid">
-                <div class="product-info">
-                    <h3><i class="fa-solid fa-gem" style="color: #4a90e2;"></i> High-Purity Quartz Stones</h3>
-                    <p>Premium-grade natural quartz stones with exceptionally high silicon dioxide (SiO2) purity and excellent durability, widely used for engineered stone manufacturing, industrial ce[...]
-                    <div class="product-meta">
-                        <p><strong><i class="fa-solid fa-anchor"></i> Loading Port:</strong> Hai Phong Port, Vietnam</p>
-                        <p><strong><i class="fa-solid fa-box-open"></i> Supply Ability:</strong> High Capacity / Monthly Container Contracts</p>
-                        <p><strong><i class="fa-solid fa-handshake"></i> Incoterms:</strong> FOB, CIF, CFR</p>
-                    </div>
-                </div>
-                <div>
-                    <table class="specs-table" style="margin-top: 35px;">
-                        <tr><td><strong>SiO2 Purity</strong></td><td>99.0% Min</td></tr>
-                        <tr><td><strong>Fe2O3</strong></td><td>0.01% Max</td></tr>
-                        <tr><td><strong>Size Availability</strong></td><td>Custom Crushed / Lump sizes available</td></tr>
-                    </table>
-                </div>
-            </div>
-        </div>
+        <!-- Products will be loaded dynamically from data/products.json -->
     </section>
 
     <!-- Contact Section -->
@@ -661,7 +589,7 @@
             <!-- Formspree Liên hệ chống Bot Spam -->
             <div class="inquiry-form">
                 <h3>Submit Inquiry Message</h3>
-                <form action="https://formspree.io/f/xoqggrbe" method="POST">
+                <form id="inquiryForm" action="https://formspree.io/f/xoqggrbe" method="POST">
                     <input type="text" name="_gotcha" style="display:none">
                     
                     <div class="form-group">
@@ -701,6 +629,88 @@
         <p>&copy; 2026 ALVA DELTA COMPANY LIMITED. All Rights Reserved.</p>
         <p style="font-size: 0.8rem; opacity: 0.6; margin-top: 5px;">Delivering Premium Export Solutions Globally</p>
     </footer>
+
+    <script>
+        // Load products dynamically from JSON
+        async function loadProducts() {
+            try {
+                const response = await fetch('data/products.json');
+                const data = await response.json();
+
+                const productsSection = document.getElementById('products');
+
+                // Find the container for product cards (skip the section title)
+                const sectionTitle = productsSection.querySelector('.section-title');
+
+                // Clear all existing product cards but keep the section title
+                while (productsSection.children.length > 1) {
+                    productsSection.removeChild(productsSection.lastChild);
+                }
+
+                // Generate product cards dynamically
+                data.products.forEach(product => {
+                    const productCard = document.createElement('div');
+                    productCard.className = 'product-card';
+
+                    // Build specifications table HTML
+                    let specsHTML = '<table class="specs-table">';
+                    product.specifications.forEach(spec => {
+                        specsHTML += `<tr><td><strong>${spec.label}</strong></td><td>${spec.value}</td></tr>`;
+                    });
+                    specsHTML += '</table>';
+
+                    // Build features list
+                    let featuresHTML = '<ul style="margin-top: 10px; padding-left: 20px;">';
+                    product.features.forEach(feature => {
+                        featuresHTML += `<li>${feature}</li>`;
+                    });
+                    featuresHTML += '</ul>';
+
+                    // Build metadata
+                    let metadataHTML = '<div class="product-meta">';
+                    if (product.metadata.loadingPort) {
+                        metadataHTML += `<p><strong><i class="fa-solid fa-anchor"></i> Loading Port:</strong> ${product.metadata.loadingPort}</p>`;
+                    }
+                    if (product.metadata.packaging) {
+                        metadataHTML += `<p><strong><i class="fa-solid fa-box-open"></i> Packaging:</strong> ${product.metadata.packaging}</p>`;
+                    }
+                    if (product.metadata.shapes) {
+                        metadataHTML += `<p><strong><i class="fa-solid fa-shapes"></i> Shapes:</strong> ${product.metadata.shapes}</p>`;
+                    }
+                    if (product.metadata.supplyAbility) {
+                        metadataHTML += `<p><strong><i class="fa-solid fa-box-open"></i> Supply Ability:</strong> ${product.metadata.supplyAbility}</p>`;
+                    }
+                    if (product.metadata.incoterms) {
+                        metadataHTML += `<p><strong><i class="fa-solid fa-handshake"></i> Incoterms:</strong> ${product.metadata.incoterms}</p>`;
+                    }
+                    metadataHTML += '</div>';
+
+                    // Build product card HTML
+                    productCard.innerHTML = `
+                        <div class="product-header-grid">
+                            <div class="product-info">
+                                <h3><i class="fa-solid ${product.icon}" style="color: ${product.iconColor};"></i> ${product.name}</h3>
+                                <p>${product.fullDescription}</p>
+                                ${metadataHTML}
+                            </div>
+                            <div>
+                                <h4>Technical Specifications</h4>
+                                ${specsHTML}
+                            </div>
+                        </div>
+                    `;
+
+                    productsSection.appendChild(productCard);
+                });
+            } catch (error) {
+                console.error('Error loading products:', error);
+                // Keep static products if JSON loading fails
+            }
+        }
+
+        // Load products when DOM is ready
+        document.addEventListener('DOMContentLoaded', loadProducts);
+    </script>
 
 </body>
 </html>
